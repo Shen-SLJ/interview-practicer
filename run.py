@@ -17,7 +17,6 @@ if __name__ == '__main__':
         exit()
 
     audio_ids = []
-
     # initialisation - determine load from previous audio/generate new audio
     regenerate = False
     if not os.path.exists("./audio"):
