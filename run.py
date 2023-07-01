@@ -5,6 +5,9 @@ import random
 import glob
 
 if __name__ == '__main__':
+    """
+    Copyright - Shen Jiang 2023
+    """
     audio_ids = []
 
     # initialisation - determine load from previous audio/generate new audio
@@ -13,7 +16,9 @@ if __name__ == '__main__':
         os.mkdir("./audio")
         regenerate = True
     else:
-        ans = input("Regenerate audio (y/n)? ")
+        ans = ""
+        while len(ans) > 1 or (ans.lower() != "y" and ans.lower() != "n"):
+            ans = input("Regenerate audio (y/n)? ")
         if ans.lower() == "y":
             for path in glob.glob("./audio/*"):
                 os.remove(path)
