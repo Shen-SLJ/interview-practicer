@@ -15,6 +15,7 @@ if __name__ == '__main__':
         f = open("questions.txt", "w")
         f.close()
         exit()
+    print("Ensure questions are seperated by new lines in questions.txt for the prompter to work correctly.")
 
     audio_ids = []
     # initialisation - determine load from previous audio/generate new audio
