@@ -8,6 +8,7 @@ if __name__ == '__main__':
     """
     Copyright - Shen Jiang 2023
     """
+    print("Ensure questions are seperated by new lines in questions.txt for the prompter to work correctly.")
     # prompt user to create questions.txt if it doesn't exist
     if not os.path.exists("./questions.txt"):
         print("questions.txt was missing from the current directory. Please place your questions in the questions.txt "
@@ -15,7 +16,6 @@ if __name__ == '__main__':
         f = open("questions.txt", "w")
         f.close()
         exit()
-    print("Ensure questions are seperated by new lines in questions.txt for the prompter to work correctly.")
 
     audio_ids = []
     # initialisation - determine load from previous audio/generate new audio
