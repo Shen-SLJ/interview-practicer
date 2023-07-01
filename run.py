@@ -8,6 +8,14 @@ if __name__ == '__main__':
     """
     Copyright - Shen Jiang 2023
     """
+    # prompt user to create questions.txt if it doesn't exist
+    if not os.path.exists("./questions.txt"):
+        print("questions.txt was missing from the current directory. Please place your questions in the questions.txt "
+              "in this directory.")
+        f = open("questions.txt", "w")
+        f.close()
+        exit()
+
     audio_ids = []
 
     # initialisation - determine load from previous audio/generate new audio
@@ -48,6 +56,7 @@ if __name__ == '__main__':
         id_store = open("ids.txt", "w")
         for id in audio_ids:
             id_store.write(f"{id}\n")
+        id_store.close()
 
     # play audio
     while len(audio_ids) > 0:
